@@ -1,0 +1,5 @@
+package com.pelatro.automation.practiceAutomation.login;
+
+public class LoginPage {
+
+}

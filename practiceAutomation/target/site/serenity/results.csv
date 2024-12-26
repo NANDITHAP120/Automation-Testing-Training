@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login","Positive Login test","SUCCESS","2024-12-20T15:57:55.107+05:30[Asia/Kolkata]","0.0","5.99"
+"Login","Negative username test","SUCCESS","2024-12-20T15:58:01.104+05:30[Asia/Kolkata]","0.0","3.81"
+"Login","Negative password test","SUCCESS","2024-12-20T15:58:04.913+05:30[Asia/Kolkata]","0.0","4.36"
+"CreateDirectory","Validate that directory is created","SUCCESS","2024-12-20T16:00:13.558+05:30[Asia/Kolkata]","0.0","1.3"

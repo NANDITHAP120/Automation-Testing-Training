@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerLogin" project="practiceAutomation" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.pelatro.automation.practiceAutomation.RunnerLogin" time="14.354">
+    <testsuite name="Feature: Login" time="14.354">
+      <testcase name="Positive Login test" classname="Login" time="5.743"/>
+      <testcase name="Negative username test" classname="Login" time="4.67"/>
+      <testcase name="Negative password test" classname="Login" time="3.925"/>
+    </testsuite>
+  </testsuite>
+</testrun>

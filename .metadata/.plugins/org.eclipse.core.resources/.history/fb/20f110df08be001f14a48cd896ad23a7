@@ -1,0 +1,43 @@
+package com.pelatro.automation.practiceAutomation.test.steps;
+
+import static org.junit.Assert.assertTrue;
+
+import com.pelatro.automation.practiceAutomation.login.LoginPage;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+public class LoginSteps {
+	
+	private LoginPage loginPage;
+	
+	@Given("I opened the app using following (.*)")
+	public void openApp(String url) {
+		loginPage.openAt(url);
+		
+	}
+	
+	@When("I enter {string} in the Username field")
+    public void enterUsername(String username) {
+        loginPage.enterUsername(username);
+    }
+
+    @When("I enter {string} in the Password field")
+    public void enterPassword(String password) {
+        loginPage.enterPassword(password);
+    }
+
+    @When("I click the Submit button")
+    public void clickSubmitButton() {
+        loginPage.submitLogin();
+    }
+
+    @Then("the URL should contain {string}")
+    public void verifyUrlContains(String expectedUrlPart) {
+        String currentUrl = loginPage.getDriver().getCurrentUrl();
+        assertTrue(currentUrl.contains(expectedUrlPart));
+    }
+    
+}

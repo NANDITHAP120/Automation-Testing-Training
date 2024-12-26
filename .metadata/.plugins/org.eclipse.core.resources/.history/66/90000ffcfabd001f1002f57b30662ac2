@@ -1,0 +1,13 @@
+package com.pelatro.automation.practiceAutomation.generic;
+
+import org.openqa.selenium.WebDriver;
+
+import net.serenitybdd.core.pages.PageObject;
+
+public class Page extends PageObject {
+
+	Page(WebDriver driver)
+	{
+		super(driver);
+	}
+}

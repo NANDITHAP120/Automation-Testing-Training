@@ -1,0 +1,14 @@
+Feature: Login
+
+  Scenario Outline: Positive Login test
+    Given I opened the app using following <URL>
+    When I type "student" into the Username field
+    And I type "Password123" into the Password field
+    And I click the Submit button
+    Then the URL should contain "practicetestautomation.com/logged-in-successfully/"
+    And the page should display "Congratulations" or "successfully logged in"
+    And the Log out button should be visible
+
+    Examples: 
+      | URL                                                     |
+      | https://practicetestautomation.com/practice-test-login/ |

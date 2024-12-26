@@ -1,0 +1,72 @@
+package com.pelatro.automation.practiceAutomation.server;
+
+import com.gargoylesoftware.htmlunit.javascript.host.file.File;
+import com.pelatro.automation.practiceAutomation.utils.*;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class ServerSteps {
+	
+	@Given("I created a directory (.*) in my home directory")
+	public void createDirectory(String dirName) {
+		new ConnectRemoteServer().execute("mkdir -p /home/pelatro/" + dirName);
+		String ls = new ConnectRemoteServer().execute("ls /home/pelatro/");
+		if (!ls.contains(dirName))
+			throw new AssertionError("Directory creation is failed !!!");
+	}
+	
+	@When("I write 5 files with 10 lines each in (.*)")
+	public void writeFiles(String dirName) {
+	    for (int i = 1; i <= 5; i++) {
+	        String filePath = "/home/pelatro/" + dirName + "/file" + i + ".txt";     
+	        new ConnectRemoteServer().execute("touch " + filePath);   
+	        for (int j = 1; j <= 10; j++) {
+	            new ConnectRemoteServer().execute("echo 'Line " + j + " of file" + i + "' >> " + filePath);
+	        }
+	    }
+	}
+
+	@Then("I list all the files in (.*)")
+	public void listFiles(String dirName) {
+	    String lsOutput = new ConnectRemoteServer().execute("ls /home/pelatro/" + dirName);
+	    System.out.println("Files in directory " + dirName + ":");
+	    System.out.println(lsOutput);
+	    
+	   
+	}
+	@Then("I concatenate all files in (.*) into a temp file")
+	public void concatenateFilesUsingTouch(String dirName) {
+	    ConnectRemoteServer remoteServer = new ConnectRemoteServer();
+
+	      String directoryPath = "/home/pelatro/" + dirName;
+	    String tempFilePath = directoryPath + "/temp.txt";
+
+	  
+	    remoteServer.execute("cd " + directoryPath + " && touch temp.txt");
+
+	    String lsOutput = remoteServer.execute("ls " + directoryPath);
+	    if (!lsOutput.contains("temp.txt")) {
+	        throw new AssertionError("Failed to create temp file in " + dirName + "!");
+	    }
+
+	    remoteServer.execute("cd " + directoryPath + " && for file in *; do cat \"$file\" >> temp.txt; done");
+
+	    String tempFileContent = remoteServer.execute("cat " + tempFilePath);
+	    if (tempFileContent.isEmpty()) {
+	        throw new AssertionError("Temp file is empty after concatenation");
+	    }
+	 
+	    System.out.println("All files concatenated into " + tempFilePath);
+	  
+	}
+	@Then("I download the (.*)")
+	public void i_download_the_temp_file(String fileName) {
+		new ConnectRemoteServer().download("/home/pelatro/Downloads","/home/pelatro/test/"+fileName);
+		if(!new ConnectRemoteServer().execute("ls /home/pelatro/Downloads/").contains(fileName))
+			throw new AssertionError("Downloaded file not present");
+	}
+
+
+}

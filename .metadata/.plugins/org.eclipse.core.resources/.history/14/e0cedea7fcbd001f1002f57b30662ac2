@@ -1,0 +1,12 @@
+package com.pelatro.automation.practiceAutomation.test.steps;
+
+public class LoginSteps {
+	
+	private LoginPage loginPage;
+   @Given("I opened the app using (.*)")
+   public void openSite(String url)
+   {
+	   loginPage.openAt(url);
+   }
+   
+}

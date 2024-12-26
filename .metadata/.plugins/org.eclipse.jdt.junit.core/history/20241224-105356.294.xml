@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerClass" project="practiceAutomation" tests="3" started="3" failures="3" errors="3" ignored="0">
+  <testsuite name="com.pelatro.automation.practiceAutomation.RunnerClass" time="32.522">
+    <testsuite name="Feature: CreateDirectory" time="32.522">
+      <testcase name="Validate that directory is created" classname="CreateDirectory" time="10.954">
+        <error>java.lang.AssertionError: Downloaded file not present
+	at com.pelatro.automation.practiceAutomation.server.ServerSteps.iDownloadTempFile(ServerSteps.java:69)
+	at ✽.I download the temp.txt(src/test/resources/server.feature:8)
+
+cucumber.runtime.junit.UndefinedThrowable: The step "i print the content in the temp.txt" is undefined
+
+</error>
+      </testcase>
+      <testcase name="Validate that directory is created" classname="CreateDirectory" time="10.745">
+        <error>java.lang.AssertionError: Downloaded file not present
+	at com.pelatro.automation.practiceAutomation.server.ServerSteps.iDownloadTempFile(ServerSteps.java:69)
+	at ✽.I download the temp.txt(src/test/resources/server.feature:8)
+
+cucumber.runtime.junit.UndefinedThrowable: The step "i print the content in the temp.txt" is undefined
+
+</error>
+      </testcase>
+      <testcase name="Validate that directory is created" classname="CreateDirectory" time="10.817">
+        <error>java.lang.AssertionError: Downloaded file not present
+	at com.pelatro.automation.practiceAutomation.server.ServerSteps.iDownloadTempFile(ServerSteps.java:69)
+	at ✽.I download the temp.txt(src/test/resources/server.feature:8)
+
+cucumber.runtime.junit.UndefinedThrowable: The step "i print the content in the temp.txt" is undefined
+
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

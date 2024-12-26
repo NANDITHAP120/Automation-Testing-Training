@@ -1,0 +1,12 @@
+Feature: CreateDirectory
+ 
+  Scenario Outline: Validate that directory is created
+    Given I created a directory <dirName> in my home directory
+ 
+    Examples:
+      | dirName |
+      | test1   |
+      | test2   |
+      | test3   |
+ 
+has context menu

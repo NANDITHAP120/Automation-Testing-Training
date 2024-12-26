@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerClass" project="practiceAutomation" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.pelatro.automation.practiceAutomation.RunnerClass" time="57.017">
+    <testsuite name="Feature: CreateDirectory" time="57.017">
+      <testcase name="Validate that directory is created" classname="CreateDirectory" time="18.837"/>
+      <testcase name="Validate that directory is created" classname="CreateDirectory" time="18.462"/>
+      <testcase name="Validate that directory is created" classname="CreateDirectory" time="19.703"/>
+    </testsuite>
+  </testsuite>
+</testrun>

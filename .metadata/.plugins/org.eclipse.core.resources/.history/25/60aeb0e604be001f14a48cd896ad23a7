@@ -1,0 +1,8 @@
+Feature: Login
+
+  Scenario Outline: Positive Login test
+    Given I opened the app using following <URL>
+
+    Examples: 
+      | URL                                                     |
+      | https://practicetestautomation.com/practice-test-login/ |

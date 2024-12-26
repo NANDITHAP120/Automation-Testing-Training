@@ -1,0 +1,17 @@
+package com.pelatro.automation.practiceAutomation.login;
+
+import org.openqa.selenium.WebDriver;
+
+import com.pelatro.automation.practiceAutomation.generic.Page;
+
+public class LoginPage extends Page{
+
+	public LoginPage(WebDriver driver) {
+		super(driver);
+		
+	}
+	private String usernameFieldXPath = "//input[@id='username']";
+    private String passwordFieldXPath = "//input[@id='password']";
+    private String submitButtonXPath = "//button[@id='submit']";
+	
+}

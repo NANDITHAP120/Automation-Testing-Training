@@ -1,0 +1,14 @@
+Feature: Login
+
+  Scenario Outline: Positive Login test
+    Given I opened the app using following <URL>
+    When I enter username <username> and password <password>
+    And I click on the Submit button
+    Then I verify new page URL contains <expectedUrlPart>
+    Then I verify new page contains expected text <expectedText>
+    Then I verify button <buttonId> is displayed on the new page
+
+    Examples: 
+      | URL                                                     | username | password    | expectedUrlPart                                    | expectedText           | buttonId |
+      | https://practicetestautomation.com/practice-test-login/ | student  | Password123 | practicetestautomation.com/logged-in-successfully/ | Congratulations        | logout   |
+      | https://practicetestautomation.com/practice-test-login/ | student  | Password123 | practicetestautomation.com/logged-in-successfully/ | successfully logged in | logout   |

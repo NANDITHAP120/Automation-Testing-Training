@@ -1,0 +1,5 @@
+package com.pelatro.automation.practiceAutomation.test.steps;
+
+public class LoginSteps {
+
+}

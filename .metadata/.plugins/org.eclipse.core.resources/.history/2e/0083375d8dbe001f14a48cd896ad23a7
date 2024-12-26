@@ -1,0 +1,10 @@
+Feature: Login
+
+  Scenario Outline: Positive Login test
+    Given I opened the app using following <URL>
+    When I enter username <username> and password <password>
+    And I click on the Submit button
+
+    Examples: 
+      | URL                                                     | username | password    |
+      | https://practicetestautomation.com/practice-test-login/ | student  | Password123 |

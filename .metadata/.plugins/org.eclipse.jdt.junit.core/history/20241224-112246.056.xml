@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerClass" project="practiceAutomation" tests="3" started="3" failures="3" errors="0" ignored="0">
+  <testsuite name="com.pelatro.automation.practiceAutomation.RunnerClass" time="3.589">
+    <testsuite name="Feature: CreateDirectory" time="3.589">
+      <testcase name="Validate that directory is created" classname="CreateDirectory" time="1.416">
+        <failure>java.lang.AssertionError: File /home/pelatro/test1/file1.txt does not contain 10 lines as expected.
+	at com.pelatro.automation.practiceAutomation.server.ServerSteps.writeFiles(ServerSteps.java:34)
+	at ✽.I write 5 files with 10 lines each in test1(src/test/resources/server.feature:5)
+
+</failure>
+      </testcase>
+      <testcase name="Validate that directory is created" classname="CreateDirectory" time="1.096">
+        <failure>java.lang.AssertionError: File /home/pelatro/test2/file1.txt does not contain 10 lines as expected.
+	at com.pelatro.automation.practiceAutomation.server.ServerSteps.writeFiles(ServerSteps.java:34)
+	at ✽.I write 5 files with 10 lines each in test2(src/test/resources/server.feature:5)
+
+</failure>
+      </testcase>
+      <testcase name="Validate that directory is created" classname="CreateDirectory" time="1.072">
+        <failure>java.lang.AssertionError: File /home/pelatro/test3/file1.txt does not contain 10 lines as expected.
+	at com.pelatro.automation.practiceAutomation.server.ServerSteps.writeFiles(ServerSteps.java:34)
+	at ✽.I write 5 files with 10 lines each in test3(src/test/resources/server.feature:5)
+
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

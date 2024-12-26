@@ -1,0 +1,17 @@
+package com.pelatro.automation.practiceAutomation.test.steps;
+
+import com.pelatro.automation.practiceAutomation.utils.*;
+
+import cucumber.api.java.en.Given;
+
+public class ServerSteps {
+	
+	@Given("I created a directory (.*) in my home directory")
+	public void createDirectory(String dirName) {
+		new ConnectRemoteServer().execute("mkdir -p /home/pelatro/" + dirName);
+		String ls = new ConnectRemoteServer().execute("ls /home/pelatro/" + dirName);
+		if (!ls.contains(dirName))
+			throw new AssertionError("Directory creation is failed !!!");
+	}
+
+}

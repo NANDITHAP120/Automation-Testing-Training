@@ -1,0 +1,8 @@
+/home/pelatro/eclipse-workspace/automation-login/practiceAutomation/src/main/java/com/pelatro/automation/practiceAutomation/generic/Page.java
+/home/pelatro/eclipse-workspace/automation-login/practiceAutomation/src/main/java/com/pelatro/automation/practiceAutomation/utils/Assertion.java
+/home/pelatro/eclipse-workspace/automation-login/practiceAutomation/src/main/java/com/pelatro/automation/practiceAutomation/utils/sshRemoteExampleUserInfo.java
+/home/pelatro/eclipse-workspace/automation-login/practiceAutomation/src/main/java/com/pelatro/automation/practiceAutomation/login/LoginPage.java
+/home/pelatro/eclipse-workspace/automation-login/practiceAutomation/src/main/java/com/pelatro/automation/practiceAutomation/utils/ConnectRemoteServer.java
+/home/pelatro/eclipse-workspace/automation-login/practiceAutomation/src/main/java/com/pelatro/automation/practiceAutomation/utils/RemoteServerProperties.java
+/home/pelatro/eclipse-workspace/automation-login/practiceAutomation/src/main/java/com/pelatro/automation/practiceAutomation/App.java
+/home/pelatro/eclipse-workspace/automation-login/practiceAutomation/src/main/java/com/pelatro/automation/practiceAutomation/server/ServerSteps.java

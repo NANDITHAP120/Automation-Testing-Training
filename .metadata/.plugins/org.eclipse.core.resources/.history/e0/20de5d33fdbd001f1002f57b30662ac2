@@ -1,0 +1,16 @@
+package com.pelatro.automation.practiceAutomation.test.steps;
+
+import com.pelatro.automation.practiceAutomation.login.LoginPage;
+
+import cucumber.api.java.en.Given;
+
+public class LoginSteps {
+	
+	private LoginPage loginPage;
+	@Given("I opened the app using following (.*)")
+   public void openSite(String url)
+   {
+	   loginPage.openUrl(url);
+   }
+   
+}
